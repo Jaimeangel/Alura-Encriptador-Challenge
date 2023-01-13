@@ -11,6 +11,7 @@
     --gray-400:#495057;
 }
 body{
+    width: 100%;
     background-color:var(--light-blue);
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -40,6 +41,7 @@ body{
     font-size: 2rem;
     line-height: 3rem;
     border: none;
+    resize: none;
 }
 .--write{
     color: var(--dark-blue);
@@ -96,6 +98,7 @@ body{
     text-align: center;
 }
 .no_content img{
+    width: 80%;
     display: none;
 }
 .no_content >p{
@@ -109,7 +112,7 @@ body{
 }
 
 .copy_area{
-    display: flex;
+    display:flex;
     flex-direction: column;
     gap: 2rem;
     width: 100%;
@@ -127,5 +130,44 @@ body{
     }
     .content__buttons .btn{
         max-width: 350px;
+    }
+}
+
+@media screen and (min-width:850px) {
+    .content{
+        flex-direction: row;
+        justify-content: center;
+        padding: 2rem;
+        height: 100vh;
+    }
+    .content__write{
+        width: 70%;
+        height: 93%;
+    }
+    .content__write p{
+        padding-left: 7rem;
+    }
+    .write_area{
+        padding-left: 7rem;
+    }
+    .content__buttons{
+        padding-left: 7rem;
+    }
+    .content__copy{
+        width: 30%;
+        height: 98%;
+    }
+    .no_content{
+        width: 100%;
+        margin-top:3.5rem;
+    }
+    .no_content img{
+        display: flex;
+    }
+    .copy_area{
+        height: 100%;
+    }
+    .--copy_text{
+        height: 100%;
     }
 }
