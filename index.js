@@ -23,8 +23,6 @@ function encrypt(){
 function decrypt(){
     const msg=write_area.value;
     const encode_msg=atob(msg)
-    console.log(encode_msg)
-    console.log(typeof(encode_msg))
     copy_area.textContent=`${encode_msg}`
     no_content_copy_area()
 }
@@ -34,6 +32,11 @@ function copy_text(){
     navigator.clipboard.writeText(`${msg}`)
 }
 
+function clean_write_area(){
+    write_area.value=''
+}
+
 btn_encrypt.addEventListener('click',encrypt)
 btn_decrypt.addEventListener('click',decrypt)
 btn_copy.addEventListener('click',copy_text)
+write_area.addEventListener('click',clean_write_area)
