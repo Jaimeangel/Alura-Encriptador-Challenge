@@ -11,25 +11,48 @@ function no_content_copy_area(){
     }
 }
 
+function alertWrite(){
+    write_area.value='!Solo letras minúsculas y sin acentos¡'
+    write_area.classList.add('alertWrite')
+    setTimeout(() => {
+        write_area.classList.remove('alertWrite')
+        write_area.value=''
+    }, 2000);
+}
+
 function encrypt(){
     const msg=write_area.value;
-    const encode_msg=btoa(msg)
-    console.log(encode_msg)
-    console.log(typeof(encode_msg))
-    copy_area.textContent=`${encode_msg}`
+    if (/[^a-zñ ]/.test(msg)) {
+        alertWrite()
+    }else{
+        let new_word=msg.replace(/e/gm,'enter')
+        new_word=new_word.replace(/o/gm,'ober')
+        new_word=new_word.replace(/i/gm,'imes')
+        new_word=new_word.replace(/a/gm,'ai')
+        new_word=new_word.replace(/u/gm,'ufat')
+        copy_area.textContent=`${new_word}`
+    }
     no_content_copy_area()
 }
 
 function decrypt(){
     const msg=write_area.value;
-    const encode_msg=atob(msg)
-    copy_area.textContent=`${encode_msg}`
+    let new_word=msg.replace(/enter/gm,'e')
+    new_word=new_word.replace(/ober/gm,'o')
+    new_word=new_word.replace(/imes/gm,'i')
+    new_word=new_word.replace(/ai/gm,'a')
+    new_word=new_word.replace(/ufat/gm,'u')
+    copy_area.textContent=`${new_word}`
     no_content_copy_area()
 }
 
 function copy_text(){
     const msg=copy_area.textContent;
     navigator.clipboard.writeText(`${msg}`)
+    btn_copy.classList.add('greenCheck')
+    setTimeout(() => {
+        btn_copy.classList.remove('greenCheck')
+    }, 800);
 }
 
 function clean_write_area(){
