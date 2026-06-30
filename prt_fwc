@@ -1,0 +1,54 @@
+Actúa como especialista en diseño de prompts para asistentes de programación.
+
+Necesito que redactes un único prompt en español para utilizarlo en Roo Code dentro de Visual Studio Code, usando el modelo Codestral. El objetivo es que Codestral construya desde cero una aplicación de análisis de datos sencilla, visual y rápida para una demostración corporativa de aproximadamente 10 minutos.
+
+Contexto del proyecto:
+
+* Lenguaje: Python.
+* Aplicación web local creada con Streamlit.
+* Librerías disponibles: Streamlit, Pandas y Plotly.
+* Archivo de datos: `fifa_world_cup_data_set.csv`.
+* El archivo estará ubicado en la misma carpeta que la aplicación.
+* El CSV utiliza separación por comas.
+* No debe existir una opción para cargar otros archivos.
+* La interfaz debe estar completamente en español.
+* No se deben utilizar APIs, modelos de IA externos ni conexiones a internet.
+* Todos los análisis e insights deben calcularse directamente con Python.
+* El resultado debe ejecutarse con `streamlit run app.py`.
+* Se debe priorizar la rapidez, la estabilidad y una cantidad moderada de código.
+
+El dataset contiene las siguientes columnas:
+
+Player ID, Player Name, National Team, Position, Age, Height, Weight, Matches Played, Minutes Played, Goals, Assists, Shots, Shots on Target, Passes Completed, Pass Accuracy (%), Key Passes, Dribbles Completed, Tackles, Interceptions, Clearances, Saves (Goalkeepers), Clean Sheets, Yellow Cards, Red Cards, Expected Goals (xG), Expected Assists (xA), Distance Covered, Sprint Count y Player Rating.
+
+La aplicación debe incluir:
+
+1. Título y descripción breve del dashboard.
+2. Lectura automática del archivo CSV.
+3. Filtros sencillos en la barra lateral:
+
+   * Selección nacional.
+   * Posición.
+4. Cuatro indicadores principales:
+
+   * Número de jugadores.
+   * Total de goles.
+   * Total de asistencias.
+   * Promedio de Player Rating.
+5. Gráfico horizontal con los 10 mejores jugadores por Player Rating.
+6. Gráfico de goles y asistencias agrupados por selección nacional.
+7. Gráfico de dispersión que compare Minutes Played, Goals y Position.
+8. Tabla con los jugadores mejor calificados.
+9. Una sección de insights automáticos en lenguaje natural, generados mediante cálculos simples, por ejemplo:
+
+   * Jugador con mejor rating.
+   * Selección con más goles.
+   * Jugador con más asistencias.
+   * Promedio general de precisión de pases.
+10. Uso de `st.cache_data` para mejorar el rendimiento.
+11. Manejo sencillo de errores si el archivo no existe o si falta alguna columna necesaria.
+12. Código claro y concentrado principalmente en un único archivo llamado `app.py`.
+
+El diseño debe verse profesional y corporativo, pero debe utilizar principalmente los componentes nativos de Streamlit, evitando CSS complejo, arquitecturas innecesarias, múltiples archivos o funcionalidades que puedan retrasar la generación y ejecución.
+
+Tu respuesta debe contener únicamente el prompt final que se copiará en Roo Code. No generes el código de la aplicación ni agregues explicaciones.
