@@ -1,0 +1,48 @@
+Actúa como especialista en creación de prompts para asistentes de programación.
+
+Necesito que redactes un único prompt en español para usarlo en Roo Code dentro de Visual Studio Code con el modelo Codestral.
+
+El objetivo es crear desde cero una aplicación sencilla de análisis de datos sobre los jugadores de la FIFA World Cup 2026.
+
+La aplicación debe:
+
+* Estar desarrollada en Python.
+* Utilizar Streamlit, Pandas y Plotly.
+* Ejecutarse con `streamlit run app.py`.
+* Leer automáticamente el archivo `fifa_world_cup_data_set.csv`, ubicado en la misma carpeta.
+* Mostrar toda la interfaz en español.
+* No utilizar internet, APIs ni modelos externos.
+* Priorizar rapidez, estabilidad y facilidad de ejecución durante una demo en vivo.
+* Mantener el código sencillo y principalmente en un único archivo llamado `app.py`.
+
+El archivo contiene información sobre jugadores, selecciones, posiciones, edad, clubes, partidos, minutos, goles, asistencias, tiros, tarjetas, acciones defensivas y estadísticas de porteros.
+
+El dashboard debe incluir:
+
+1. Un título y una breve descripción.
+2. Filtros por selección, posición y mínimo de minutos jugados.
+3. Cuatro indicadores principales:
+
+   * Jugadores analizados.
+   * Selecciones representadas.
+   * Total de goles.
+   * Total de asistencias.
+4. Un gráfico con los máximos goleadores.
+5. Un gráfico comparando goles y asistencias por selección.
+6. Un gráfico que relacione tiros, goles y minutos jugados.
+7. Un gráfico sencillo con los mejores porteros según su porcentaje de atajadas.
+8. Una tabla con los jugadores de mejor rendimiento ofensivo.
+9. Una sección de insights automáticos en lenguaje natural, por ejemplo:
+
+   * Máximo goleador.
+   * Jugador con más asistencias.
+   * Selección con más goles.
+   * Portero con mejor porcentaje de atajadas.
+
+Los gráficos e indicadores deben actualizarse cuando se utilicen los filtros.
+
+La aplicación debe verse moderna, clara y profesional, pero sin incluir funcionalidades complejas, diseños avanzados ni elementos innecesarios que puedan afectar el rendimiento.
+
+También debe mostrar mensajes claros si el archivo no se encuentra, si no contiene datos o si los filtros no producen resultados.
+
+Tu respuesta debe contener únicamente el prompt final que se copiará en Roo Code. No generes el código ni agregues explicaciones.
